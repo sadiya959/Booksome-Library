@@ -1,0 +1,110 @@
+.register {
+  width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  width: 8rem;
+  position: absolute;
+  left: 5%;
+}
+
+.register-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+form {
+  grid-column: span 7;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 50%;
+}
+
+.form-group input {
+  border: #ebebeb solid 1px;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: #f8c470 1px solid;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9c9c9c;
+}
+
+form button {
+  background-color: #f8c470;
+  border: none;
+  padding: 0.7rem;
+  width: 50%;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+form p {
+  color: #9c9c9c;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+form p a {
+  color: #9c9c9c;
+  font-weight: 900;
+  margin-top: 1rem;
+}
+
+.photo {
+  grid-column: span 5;
+  background-color: #ebebeb;
+  height: 100%;
+}
+
+.photo img {
+  width: 37.5rem;
+  height: 37.5rem;
+  object-fit: contain;
+  object-position: center;
+  margin-top: 1rem;
+  margin-left: -6rem;
+}
+
+@media (max-width: 768px) {
+  form {
+    grid-column: span 12;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .form-group {
+    width: 80%;
+  }
+
+  form button {
+    width: 80%;
+  }
+}
