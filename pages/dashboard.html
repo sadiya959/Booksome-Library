@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booksome Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="grid-container">
+     <div class="left-sidebar">
+      <div class="close-sidebar" id="close-sidebar">
+  <i class="ri-close-line"></i>
+</div>
+
+        <div class="sidebar-header">
+           <img class="logo" src="../assets/images/logo.png" alt="Booksome Library Logo">
+        </div>
+        
+        <nav>
+          <ul class="sidebar-menu">
+            <li class="active"><i class="ri-home-line"></i><a href="/pages/home.html">Home</a></li>
+            <li><i class="ri-book-open-line"></i><a href="/pages/books.html">Books</a></li>
+            <li><i class="ri-menu-search-line"></i><a href="/pages/book-category.html">Category</a></li>
+            <li><i class="ri-book-line"></i><a href="/pages/my-library.html">My Library</a></li>
+            <li><i class="ri-heart-line"></i><a href="/pages/my-library.html">Favorite</a></li>
+            <li><i class="ri-user-line"></i><a href="/pages/profile.html">Profile</a></li>
+            <hr>
+            <li><i class="ri-settings-line"></i><a href="#">Settings</a></li>
+            <li><i class="ri-logout-box-line"></i><a href="/pages/logout.html">Logout</a></li>
+          </ul>
+        </nav>
+     </div>
+
+      <div class="main-content">
+        <header>
+          <div class="main-menu">
+            <div class="search-wrapper">
+              <input type="text" placeholder="Search..." class="search-input"/>
+              <div class="search-icon"><i class="ri-search-line"></i></div>
+            </div>
+            <div class="user-actions">
+              <div class="dark-mode">
+              <i class="ri-moon-line"></i>
+  
+            </div>
+            <div class="bell">
+              <i class="ri-notification-line"></i>
+            </div>
+            <div class="user-profile">
+              <img class="profile-photo" src="../assets/images/profile.png" alt="User Profile" />
+            </div>
+            </div>
+
+          </div>
+          <div class="hamburger" id="hamburger">
+  <i class="ri-menu-line"></i>
+</div>
+
+        </header>
+
+        <main>
+          <section class="dashboard-welcome">
+            <img class="shelf" src="../assets/images/shelfs.png" alt="shelfs">
+            <div class="info">
+              <h2>Welcome to Booksome Library! Username</h2>
+            <p>The Library serves as a welcoming home for knowledge <br> seekers and for all book lovers.</p>
+            <button>Learn More</button>
+            </div>
+            <img class="hero" src="../assets/images/hero.png" alt="vector image">
+          </section>
+          <section class="dashboard-recommended">
+            <div class="recommend-header">
+            <h2>Recommended</h2>
+             <button class="btn">See More</button>
+            </div>
+            <div class="recommended-books">
+              <div class="book-card">
+                <img src="../assets/images/book1.webp" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/book2.jpg" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/book3.jpg" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/book4.avif" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+            </div>
+
+          </section>
+          <section class="dashboard-categories">
+            <div class="recommend-header">
+           <h2>Categories</h2>
+            <button class="btn"><i class="ri-menu-search-line"></i></button>
+           </div>
+           <div class="tags">
+            <ul class="tag-list">
+              <li class="active">All</li>
+              <li>Sci-fi</li>
+              <li>Fantasy</li>
+              <li>Darama</li>
+              <li>Education</li>
+              <li>Bussines</li>
+              <li>Adventure</li>
+              <li>Geography</li>
+            </ul>
+           </div>
+            <div class="categories">
+              <div class="book-card">
+                <img src="../assets/images/book5.jpg" alt="Book 5">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/book6.jpg" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/book7.webp" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/book8.jpg" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/book9.jpg" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+              <div class="book-card">
+                <img src="../assets/images/design-for-writers-book-cover-tf-2-a-million-to-one.webp" alt="Book 1">
+                <h3>Nursing Home</h3>
+                <p>Joanna Nell</p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+</div>
+  <script src="../main.js"></script>
+</body>
+</html>
