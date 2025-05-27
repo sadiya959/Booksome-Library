@@ -1,3 +1,7 @@
+button{
+  cursor: pointer;
+}
+
 .register {
   width: 100%;
   height: 100vh;
@@ -41,6 +45,15 @@ form {
   padding: 0.7rem;
   width: 100%;
   font-size: 1rem;
+}
+
+
+.form-group input.invalid{
+  border: #ea1818 solid 1px;
+}
+.error-message{
+  margin-top: -0.4rem;
+  color: #e64848;
 }
 
 .form-group input:focus {

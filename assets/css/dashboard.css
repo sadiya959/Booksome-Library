@@ -15,6 +15,7 @@
   --input-border-color: rgb(80, 80, 80);
 }
 
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -34,6 +35,8 @@ i{
   align-items: center;
   box-shadow: 0 0 10px var(--border-color);
   z-index: 1000;
+    background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .sidebar-menu {
@@ -344,7 +347,6 @@ font-weight: 400;
     width: 250px;
     height: 100vh;
     max-height: 100vh;
-    background-color: #fff;
     z-index: 999;
     transition: left 0.3s ease;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
