@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booksome Library</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/books.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="left-sidebar">
+        <div class="close-sidebar" id="close-sidebar">
+          <i class="ri-close-line"></i>
+        </div>
+
+        <div class="sidebar-header">
+          <img
+            class="logo"
+            src="../assets/images/logo.png"
+            alt="Booksome Library Logo"
+          />
+        </div>
+
+        <nav>
+          <ul class="sidebar-menu">
+            <li class="active">
+              <i class="ri-home-line"></i
+              ><a href="../pages/dashboard.html">Home</a>
+            </li>
+            <li>
+              <i class="ri-book-open-line"></i
+              ><a href="/pages/books.html">Books</a>
+            </li>
+             <li><i class="ri-add-line"></i><a href="/pages/add-book.html">Add Book</a></li>
+            <li>
+              <i class="ri-book-line"></i
+              ><a href="/pages/myBooks.html">My Books</a>
+            </li>
+            <li>
+              <i class="ri-heart-line"></i
+              ><a href="/pages/favorite.html">Favorite</a>
+            </li>
+            <li>
+              <i class="ri-user-line"></i
+              ><a href="/pages/profile.html">Profile</a>
+            </li>
+            <hr />
+            <li><i class="ri-settings-line"></i><a href="#">Settings</a></li>
+            <li>
+              <i class="ri-logout-box-line"></i
+              ><a href="../index.html">Logout</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="main-content">
+        <header>
+          <div class="main-menu">
+            <div class="search-wrapper">
+              <input type="text" placeholder="Search..." class="search-input" />
+              <div class="search-icon"><i class="ri-search-line"></i></div>
+            </div>
+            <div class="user-actions">
+              <div class="dark-mode">
+                <i class="ri-moon-line" id="theme-toggle"></i>
+              </div>
+              <div class="bell">
+                <i class="ri-notification-line"></i>
+              </div>
+              <div class="user-profile">
+                <img
+                  class="profile-photo"
+                  src="../assets/images/profile.png"
+                  alt="User Profile"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <i class="ri-menu-line"></i>
+          </div>
+        </header>
+
+        <main>
+          <div class="books"></div>
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/getBooks-localstorage.js"></script>
+  <script src="../main.js"></script>
+  </body>
+</html>

@@ -7,7 +7,7 @@
 }
 
 /* Dark Mode */
-.dark-mode {
+body.dark-mode {
   --bg-color: #141526;
   --text-color: #fff;
   --accent-color: #f8c470;

@@ -31,8 +31,8 @@
             <li class="active"><i class="ri-home-line"></i><a href="./dashboard.html">Home</a></li>
             <li><i class="ri-book-open-line"></i><a href="/pages/books.html">Books</a></li>
             <li><i class="ri-add-line"></i><a href="/pages/add-book.html">Add Book</a></li>
-            <li><i class="ri-book-line"></i><a href="/pages/my-library.html">My Library</a></li>
-            <li><i class="ri-heart-line"></i><a href="/pages/fovrite.html">Favorite</a></li>
+            <li><i class="ri-book-line"></i><a href="/pages/myBooks.html">My Books</a></li>
+            <li><i class="ri-heart-line"></i><a href="/pages/favorite.html">Favorite</a></li>
             <li><i class="ri-user-line"></i><a href="/pages/profile.html">Profile</a></li>
             <hr>
             <li><i class="ri-settings-line"></i><a href="#">Settings</a></li>
@@ -50,9 +50,8 @@
             </div>
             <div class="user-actions">
               <div class="dark-mode">
-              <i class="ri-moon-line"></i>
-  
-            </div>
+                <i class="ri-moon-line" id="theme-toggle"></i>
+              </div>
             <div class="bell">
               <i class="ri-notification-line"></i>
             </div>
@@ -72,7 +71,7 @@
           <section class="dashboard-welcome">
             <img class="shelf" src="../assets/images/shelfs.png" alt="shelfs">
             <div class="info">
-              <h2>Welcome to Booksome Library! Username</h2>
+              <h2>Welcome to Booksome Library! <span id="user-name">Username</span> </h2>
             <p>The Library serves as a welcoming home for knowledge <br> seekers and for all book lovers.</p>
             <button>Learn More</button>
             </div>

@@ -49,11 +49,15 @@ loginForm.addEventListener('submit', (e) => {
           
        existingUsers.forEach(user => {
         if(user.email === email.value && user.password === password.value){
-            console.log("Form submitted successfully!");
+            alert("Form submitted successfully!");
             window.location.href = "../pages/dashboard.html";
         }
        });
        
+    }
+
+    else{
+      alert('email or password does not match')
     }
 
     
