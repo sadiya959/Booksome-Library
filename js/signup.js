@@ -69,10 +69,9 @@ signupForm.addEventListener("submit", (e) => {
     existingUsers.push(newUser);
     localStorage.setItem("users", JSON.stringify(existingUsers));
 
-    console.log("Form submitted successfully!");
-    console.log(newUser);
+    alert("Form submitted successfully!");
     window.location.href = "./pages/login.html";
   } else {
-    console.log("Form submission failed.");
+    alert("Form submission failed.");
   }
 });

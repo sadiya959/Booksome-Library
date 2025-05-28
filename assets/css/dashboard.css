@@ -148,7 +148,7 @@ padding: 0.5rem 2rem;
 .profile-photo {
   width: 2.2rem;
   height: 2.2rem;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 50%;
   margin-top: 0.4rem;
 }
@@ -285,11 +285,12 @@ font-weight: 400;
 .tag-list{
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 
 .tag-list li{
-    background-color: rgba(255, 249, 239, 0.9);
+    background-color: var(--accent-color);
     padding: 0.1rem 1.5rem;
     border-radius: 10px;
     color: var(--text-color);
@@ -298,10 +299,10 @@ font-weight: 400;
     transition: all 0.3s ease-in-out;
     font-size: 1rem;
     margin-top: 1rem;
+    color: #000;
 }
 .tag-list li.active{
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: rgba(255, 236, 196, 0.9);
 }
 
 .categories{
@@ -379,11 +380,15 @@ font-weight: 400;
     padding: 1rem;
   }
 
-  .recommended-books,
+  .recommended-books{
+  flex-wrap: wrap;
+  }
+  
+
   .categories {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
   }
 
   .dashboard-welcome {
@@ -404,4 +409,10 @@ font-weight: 400;
  .close-sidebar {
     display: block;
   }
+
+  .profile-photo {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
 }

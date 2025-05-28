@@ -20,33 +20,7 @@ addBookForm.addEventListener('submit', (e) => {
   getBooks.push(bookData)
 
   localStorage.setItem("books", JSON.stringify(getBooks))
-  console.log(getBooks)
 
-  addBookDom();
+  window.location.href = "../pages/myBooks.html";
 });
 
-
-function addBookDom() {
-  const books = JSON.parse(localStorage.getItem('books')) || [];
-
-  books.forEach(book => {
-    BooksContainer.innerHTML += `
-      <div class="book-card">
-        <img src="${book.cover}" alt="${book.title}" />
-        <h3 class="book-title">${book.title}</h3>
-        <p class="book-author">${book.author}</p>
-        <div class="book-info">
-          <div class="rate">
-            <i class="ri-star-line"></i>
-            <i class="ri-star-line"></i>
-            <i class="ri-star-line"></i>
-          <i class="ri-star-line"></i>
-          <i class="ri-star-line"></i>
-        </div>
-        <span class="book-price">${book.year}</span>
-        <i class="ri-heart-line"></i>
-      </div>
-    </div>
-  `;
-});
-}

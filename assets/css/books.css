@@ -15,9 +15,32 @@ body.dark-mode {
   --input-border-color: rgb(80, 80, 80);
 }
 
+
+.spinner{
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ border: 6px solid #ccc;
+ border-top: 6px solid var(--accent-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .books {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(4,1fr);
   padding: 2rem;
   gap: 1.5rem;
   max-width: 1300px;
@@ -102,12 +125,35 @@ body.dark-mode {
 }
 
 
+.btn{
+  background-color: #e6bc48;
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ddb23b;
+}
+
+
+@media (max-width: 900px) {
+
+.books {
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+}
 
 
 @media (max-width: 600px) {
 
 .books {
   place-items: center;
+  grid-template-columns: 1fr;
 }
   .book-card {
     width: 100%;

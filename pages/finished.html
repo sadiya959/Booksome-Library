@@ -7,8 +7,9 @@
   <title>Booksome Library</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../assets/css/main.css" />
-  <link rel="stylesheet" href="../assets/css/add-book.css" />
   <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  <link rel="stylesheet" href="../assets/css/fov-books.css" />
+
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,11 +31,11 @@
         <nav>
           <ul class="sidebar-menu">
             <li class="active"><i class="ri-home-line"></i><a href="./dashboard.html">Home</a></li>
-            <li><i class="ri-book-open-line"></i><a href="./books.html">Books</a></li>
-            <li><i class="ri-add-line"></i><a href="./add-book.html">Add Book</a></li>
-            <li><i class="ri-book-line"></i><a href="./myBooks.html">My Books</a></li>
-           <li><i class="ri-check-double-line"></i><a href="/pages/finished.html">Finished</a></li>
-            <li><i class="ri-user-line"></i><a href="./profile.html">Profile</a></li>
+            <li><i class="ri-book-open-line"></i><a href="/pages/books.html">Books</a></li>
+            <li><i class="ri-add-line"></i><a href="/pages/add-book.html">Add Book</a></li>
+            <li><i class="ri-book-line"></i><a href="/pages/myBooks.html">My Books</a></li>
+            <li><i class="ri-check-double-line"></i><a href="/pages/finished.html">Finished</a></li>
+            <li><i class="ri-user-line"></i><a href="/pages/profile.html">Profile</a></li>
             <hr>
             <li><i class="ri-settings-line"></i><a href="#">Settings</a></li>
             <li><i class="ri-logout-box-line"></i><a href="../index.html">Logout</a></li>
@@ -51,8 +52,8 @@
             </div>
             <div class="user-actions">
               <div class="dark-mode">
-              <i class="ri-moon-line"></i>
-  
+          <i class="ri-moon-line" id="theme-toggle"></i>
+
             </div>
             <div class="bell">
               <i class="ri-notification-line"></i>
@@ -68,33 +69,13 @@
 </div>
 
         </header>
-          <div class="add-book-form">
-            <h2>Add New Book</h2>
-            <form action="#" id="book-form">
-               <div class="form-group
-              img-cover">
-                <label for="cover">Cover Image URL:</label>
-                <input type="url" id="cover" name="cover" required /> 
-              </div>
-              <div class="form-group">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required />
-              </div>
-              <div class="form-group">
-                <label for="author">Author:</label>
-                <input type="text" id="author" name="author" required />
-              </div>
-              <div class="form-group">
-                <label for="author">Year:</label>
-                <input type="number" id="year" name="year" required />
-              </div>
-             
-              <button type="submit">Add Book</button>
-            </form>
-          </div>
-      </div>
+
+        <main>
+          
+        </main>
 </div>
-  <script src="../js/add-book.js"></script>
+</div>
   <script src="../main.js"></script>
+  <script src="/js/fovBooks.js"></script>
 </body>
 </html>

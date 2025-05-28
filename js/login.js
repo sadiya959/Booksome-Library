@@ -1,10 +1,6 @@
-
-
-const loginForm = document.querySelector("#login-form")
-const email = document.querySelector("#email")
-const password = document.querySelector("#password")
-
-
+const loginForm = document.querySelector("#login-form");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
 
 function validateEmail() {
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -37,28 +33,27 @@ const setSuccess = (element) => {
   element.parentElement.querySelector(".error-message").textContent = "";
 };
 
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault()
+  const isEmailValid = validateEmail();
+  const isPasswordValid = validatePassword();
 
-      const isEmailValid = validateEmail();
-      const isPasswordValid = validatePassword();
+  if (!isEmailValid || !isPasswordValid) {
+    alert("Please fill in the form correctly.");
+    return;
+  }
 
-    if(isEmailValid && isPasswordValid){
-        const existingUsers = JSON.parse(localStorage.getItem('users'))
-          
-       existingUsers.forEach(user => {
-        if(user.email === email.value && user.password === password.value){
-            alert("Form submitted successfully!");
-            window.location.href = "../pages/dashboard.html";
-        }
-       });
-       
-    }
+  const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-    else{
-      alert('email or password does not match')
-    }
+  const matchedUser = existingUsers.find(
+    (user) => user.email === email.value && user.password === password.value
+  );
 
-    
-})
+  if (matchedUser) {
+    alert("login sucessfuly");
+    window.location.href = "../pages/dashboard.html";
+  } else {
+    alert("Email or password does not match.");
+  }
+});

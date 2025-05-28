@@ -1,23 +1,25 @@
 const container = document.querySelector(".books");
 
+function addBookDom() {
+  const books = JSON.parse(localStorage.getItem('books')) || [];
 
-async function fetchBooks() {
-  try {
-    books = JSON.parse(localStorage.getItem('books')) || [];
-    if (books.length > 0) {
-      return books;
-    }
-    return books;
-  } catch (error) {
-    console.error("Error getting books from localstroge:", error);
-    return [];
+  if (books.length === 0) {
+    container.innerHTML = `
+      <div class="no-books">
+        <h2>No books added yet!</h2>
+        <p>Start adding your books. you're reading</p>
+      </div>
+    `;
+    return;
   }
-}
 
-function displayBooks(books) {
-books.forEach(book => {
-  container.innerHTML += `
-    <div class="book-card">
+  container.innerHTML = "";
+
+  books.forEach(book => {
+    const bookCard = document.createElement("div");
+    bookCard.classList.add("book-card");
+
+    bookCard.innerHTML = `
       <img src="${book.cover}" alt="${book.title}" />
       <h3 class="book-title">${book.title}</h3>
       <p class="book-author">${book.author}</p>
@@ -30,13 +32,23 @@ books.forEach(book => {
           <i class="ri-star-line"></i>
         </div>
         <span class="book-price">${book.year}</span>
-        <i class="ri-heart-line"></i>
+        <button class="btn">Finish</button>
       </div>
-    </div>
-  `;
-});
+    `;
 
+    container.appendChild(bookCard);
+  });
 }
 
+addBookDom()
 
-fetchBooks().then(displayBooks);
+
+
+const btns = container.querySelectorAll('.btn')
+
+
+btns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    console.log(e.target)
+  })
+})
