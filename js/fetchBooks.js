@@ -61,3 +61,12 @@ function displayBooks(books) {
 
 fetchBooks();
 
+// Event listener for the search form
+document.querySelector(".search-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const subject = document.querySelector(".search-input").value;
+  fetchBooks(subject);
+});
+
+
+
