@@ -415,4 +415,14 @@ font-weight: 400;
   height: 3.5rem;
 }
 
+.search-input {
+  width: 70%;
+  padding: 0.5rem;
+  padding-left: 2rem;
+}
+
+.search-icon {
+  left: 2%;
+}
+
 }
