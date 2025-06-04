@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/dashboard.css" />
-    <link rel="stylesheet" href="../assets/css/books.css" />
+    <link rel="stylesheet" href="../assets/css/profile.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -52,12 +52,18 @@
               <i class="ri-book-open-line"></i
               ><a href="/pages/books.html">Books</a>
             </li>
-             <li><i class="ri-add-line"></i><a href="/pages/add-book.html">Add Book</a></li>
+            <li>
+              <i class="ri-add-line"></i
+              ><a href="/pages/add-book.html">Add Book</a>
+            </li>
             <li>
               <i class="ri-book-line"></i
               ><a href="/pages/myBooks.html">My Books</a>
             </li>
-                <li><i class="ri-check-double-line"></i><a href="/pages/finished.html">Finished</a></li>
+            <li>
+              <i class="ri-check-double-line"></i
+              ><a href="/pages/finished.html">Finished</a>
+            </li>
             <li>
               <i class="ri-user-line"></i
               ><a href="/pages/profile.html">Profile</a>
@@ -101,12 +107,54 @@
         </header>
 
         <main>
-          <div class="books"></div>
+          <div class="profile-container">
+            <form class="profile-form">
+              <h2>Profile</h2>
+
+              <div class="profile-pic">
+                <img
+                  id="profileImage"
+                  src="/assets/images/profile.png"
+                  alt="Profile"
+                />
+
+
+                <div>
+                  <button type="button" class="change-btn" >
+                    Change picture
+                  </button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="username">Username</label>
+                <input type="text" id="username" disabled value="sadia_dev" />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  disabled
+                  value="sadia_dev@gmail.com"
+                />
+              </div>
+
+              <div class="field">
+                <label for="about">About me</label>
+                <textarea id="about" rows="8">I'm a passionate web developer.</textarea>
+              </div>
+
+              <button class="save-btn" type="submit">Save changes</button>
+            </form>
+          </div>
         </main>
       </div>
     </div>
 
-    <script src="../js/getBooks-localstorage.js"></script>
-  <script src="../main.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../main.js"></script>
   </body>
 </html>

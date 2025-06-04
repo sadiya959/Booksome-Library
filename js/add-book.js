@@ -10,10 +10,12 @@ const BooksContainer = document.querySelector(".books");
 addBookForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const bookData = {
+    id: Date.now(),
     cover: cover.value,
     title: title.value,
     author: author.value,
     year: year.value,
+    finished: false
   };
   
   const getBooks = JSON.parse(localStorage.getItem('books')) || []

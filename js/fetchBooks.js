@@ -39,7 +39,7 @@ function displayBooks(books) {
     
     container.innerHTML += `
       <div class="book-card">
-        <img src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.title}" />
+        <img onclick="window.location.href='book-details.html?id=${book.id}'" src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.title}" />
         <h3 class="book-title">${book.volumeInfo.title}</h3>
         <p class="book-author">${book.volumeInfo.authors[0]}</p>
         <div class="book-info">
@@ -59,5 +59,5 @@ function displayBooks(books) {
 }
 
 
-
 fetchBooks();
+

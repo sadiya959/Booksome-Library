@@ -1,5 +1,19 @@
-const toggleButton = document.getElementById('theme-toggle');
+const toggleButton = document.querySelector('.theme-toggle');
 const body = document.body;
+
+const sidebarLinks = document.querySelectorAll('.sidebar-menu li a');
+
+sidebarLinks.forEach(link => {
+  if (link.href === window.location.href) {
+    link.parentElement.classList.add('active');
+  }
+
+  link.addEventListener('click', () => {
+    sidebarLinks.forEach(l => l.parentElement.classList.remove('active'));
+    link.parentElement.classList.add('active');
+  });
+});
+
 
 window.addEventListener('DOMContentLoaded', () => {
   const theme  = localStorage.getItem('theme') 
