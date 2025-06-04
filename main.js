@@ -1,4 +1,4 @@
-const toggleButton = document.querySelector('.theme-toggle');
+const toggleButton = document.querySelector('#theme-toggle');
 const body = document.body;
 
 const sidebarLinks = document.querySelectorAll('.sidebar-menu li a');
