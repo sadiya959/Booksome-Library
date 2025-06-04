@@ -61,7 +61,7 @@ function displayBooks(books) {
 
 fetchBooks();
 
-// Event listener for the search form
+// search book
 document.querySelector(".search-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const subject = document.querySelector(".search-input").value;
